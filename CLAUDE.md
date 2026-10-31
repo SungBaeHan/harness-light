@@ -1,19 +1,20 @@
 # Claude Instructions
 
-This repository uses the Coding Interview AI Harness.
+This repository uses **harness-light**.
 
-Before analyzing, planning, or modifying code:
+Before analyzing, planning, or modifying code, read `docs/RULES.md` and follow it.
 
-1. Read `docs/AI_ENTRYPOINT.md`.
-2. Follow the document reading order defined there.
-3. Treat `task/ORIGINAL_TASK.md` as the authoritative interview task when it exists.
-4. Do not modify `task/ORIGINAL_TASK.md`.
-5. Use `docs/SSOT.md` for interpreted requirements, assumptions, scope, implementation status, and verification results.
+## Sources of truth
 
-The interview task and explicit human instructions always take priority over the harness.
+1. `task/ORIGINAL_TASK.md` — the original task. Authoritative. **Never modify it.**
+2. Explicit instructions from the human during the session.
+3. `docs/SSOT.md` — your interpretation: requirements, assumptions, scope, design, status, verification.
+4. `docs/RULES.md` — how to work.
 
-Do not introduce additional workflow, architecture, documentation, or infrastructure unless required by the task.
+If anything in this harness conflicts with the task or the human, follow the task and the human.
 
-Prioritize:
+## Priority
 
-Requirements → Minimum Working Implementation → Execution → Verification → Critical/Major Fixes → Production Reasoning
+```text
+Requirements → Working Software → Verification → Critical/Major Fixes → Code Quality → Production Reasoning
+```
