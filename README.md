@@ -37,7 +37,14 @@ Understand → Scope → Plan → [Human Checkpoint] → Implement → Run → V
 
 ## 사용 방법
 
-1. 작업 루트에 `CLAUDE.md`와 `docs/`를 복사한다.
+1. 작업 루트에 `CLAUDE.md`와 `docs/`를 복사한다. 작업 루트에서 아래 명령을 실행하면 필요한 파일 3개만 받는다.
+
+```bash
+curl -fsSL --create-dirs -o CLAUDE.md https://raw.githubusercontent.com/SungBaeHan/harness-light/master/CLAUDE.md -o docs/RULES.md https://raw.githubusercontent.com/SungBaeHan/harness-light/master/docs/RULES.md -o docs/SSOT.md https://raw.githubusercontent.com/SungBaeHan/harness-light/master/docs/SSOT.md
+```
+
+Windows PowerShell에서는 `curl` 대신 `curl.exe`로 실행한다. 이미 같은 이름의 파일이 있으면 덮어쓰므로, 기존 `CLAUDE.md`가 있다면 먼저 백업하고 내용을 합친다.
+
 2. 작업 요구사항 원문을 `task/ORIGINAL_TASK.md`에 그대로 저장한다.
 3. 작업 루트에서 Claude Code를 실행하고 시작한다.
 
